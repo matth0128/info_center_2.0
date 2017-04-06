@@ -1,0 +1,153 @@
+@font-face {
+    font-family: '../font/BebasNeueRegular';
+    src: url('..font/BebasNeue-webfont.eot');
+    src: url('../font/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/BebasNeue-webfont.woff') format('woff'),
+         url('../font/BebasNeue-webfont.ttf') format('truetype'),
+         url('../font/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    cursor: none;
+}
+
+body, html { 
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: black;
+    font-family: '../font/BebasNeueRegular', Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+/* CONTAINER */
+.left, .right {
+    height: 100%;
+    padding:  .5% 0;
+    display: block;
+}
+.left {
+    width: 30%;
+    float: left;
+}
+.right {
+    width: 70%;
+    float: right;
+}
+
+/* CONSOLE */
+.console {
+    width: 100%;
+    clear: both;
+    display: block;
+    text-align: center;
+}
+
+/* TRAFFIC MAP  */
+#traffic-map {
+    height: 97vh;
+    width: 69vw;
+    padding-top: .5%;
+    position: fixed;
+}
+#traffic-map > iframe {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+/* WEATHER */
+#weather {
+    height: 97vh;
+    width: 69vw;
+    padding-top: .5%;
+    position: fixed;
+}
+#weather > iframe {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+/* ALERTS */
+#alerts {
+    height: 97vh;
+    width: 69vw;
+    padding-top: .5%;
+    position: fixed;
+}
+#alerts > iframe {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+/* REFRESH BUTTON */
+#refresh_button:disabled {
+    color: #777777;    
+}
+
+/* BUTTONS */
+button {
+    font-family: '../font/BebasNeueRegular', Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    display: inline-block;
+    position: relative;
+    width: 65%;
+    border: 5% solid #fff;
+    color: #fff;
+    border-radius: 6%;
+    background-color: transparent;
+    margin: 2%;
+    height: 12vh;
+}
+
+/* ANAMATIONS */
+button:active {
+    background-color: #fff;
+    color: #000;
+    border-color: rgba(255,255,255,.15) !important;
+}
+
+button:focus {
+    color: #fff;
+    background-color: rgba(255,255,255,.15) !important;
+}
+
+.info {
+    position: absolute;
+    opacity: 0;
+}
+
+.item1 {
+    animation: fadeIn 750ms ease-in-out forwards;
+}
+
+.info:not(.item1):not(.fadeIn):not(.fadeOut) {
+    right: -999999999px;
+}
+
+.fadeOut {
+    opacity: 1;
+    animation: fadeOut 750ms ease-in-out forwards;
+}
+.fadeIn {
+    opacity: 0;
+    animation: fadeIn 750ms ease-in-out forwards;
+    animation-delay: 325ms;
+}
+
+@keyframes fadeOut {
+    100% { opacity: 0; }
+}
+@keyframes fadeIn {
+    100% { opacity: 100; }
+}

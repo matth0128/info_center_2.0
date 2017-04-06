@@ -1,0 +1,53 @@
+.App {
+  text-align: center;
+}
+
+@font-face {
+  font-family: '/font/BebasNeueRegular';
+  src: url('font/BebasNeue-webfont.eot');
+  src: url('/font/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/font/BebasNeue-webfont.woff') format('woff'),
+  url('/font/BebasNeue-webfont.ttf') format('truetype'),
+  url('/font/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  cursor: none;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: black;
+  font-family: '/font/BebasNeueRegular', Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+/* CONTAINER */
+.left, .right {
+  height: 100%;
+  padding:  .5% 0;
+  display: block;
+}
+.left {
+  width: 30%;
+  float: left;
+}
+.right {
+  width: 70%;
+  float: right;
+}
+
+/* CONSOLE */
+.console {
+  width: 100%;
+  clear: both;
+  display: block;
+  text-align: center;
+}
